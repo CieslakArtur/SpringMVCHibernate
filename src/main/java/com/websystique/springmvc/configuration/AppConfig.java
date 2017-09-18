@@ -26,7 +26,7 @@ public class AppConfig {
 	@Bean
 	public MessageSource messageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-		//Spring bedzie szukal pliku messages.properties aby odczytaæ komunikaty o b³êdach w validacji
+		//Spring will search for a file named messages.properties in application class path.
 		messageSource.setBasename("messages");
 		return messageSource;
 	}

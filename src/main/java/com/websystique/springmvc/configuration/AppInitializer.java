@@ -8,10 +8,12 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-//Przypomina fragment web.xml gdzie uzywamy front-controllera DispatcherServlet
-//Zamiast pliku spring-servlet.xml podajemy klase Konfiguracyjn¹
-/*public class AppInitializer implements WebApplicationInitializer{
-
+/*
+ * The content above resembles the content of web.xml as we are using the front-controller DispatherServler, 
+ * assigning the mapping (url-pattern in xml) and instead of providing the path to spring configuration f
+ * ile(spring-servlet.xml) , here we are registering the Configuration Class.
+ */
+/*
 	@Override
 	public void onStartup(ServletContext container) throws ServletException {
 		AnnotationConfigWebApplicationContext ctx=new AnnotationConfigWebApplicationContext();
@@ -24,7 +26,10 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 	}
 }*/
 
-//Bardziej treœciwa i rekomendowana wersja
+/*
+ * Above class can be written even more concisely [and it’s the preferred way], by extending 
+ * AbstractAnnotationConfigDispatcherServletInitializer
+ */
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
