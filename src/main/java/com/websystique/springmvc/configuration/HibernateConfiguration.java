@@ -33,7 +33,7 @@ public class HibernateConfiguration {
 		return sessionFactory;
 	}
 	
-	@Bean
+	
 	private Properties hibernateProperties() {
 		Properties properties=new Properties();
 		properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));

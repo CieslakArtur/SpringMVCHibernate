@@ -34,7 +34,7 @@ public class AppController {
 	public String listEmployees(ModelMap model) {
 		List<Employee> employees = service.findAllEmployees();
 		model.addAttribute("employees", employees);
-		return "allEmployees";
+		return "allemployees";
 	}
 
 	/*
